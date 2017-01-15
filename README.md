@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Nishant-Pathak/MathView.svg?branch=master)](https://travis-ci.org/Nishant-Pathak/MathView)
+[ ![Download](https://api.bintray.com/packages/nishantpathak/public/MathView/images/download.svg?version=0.6) ](https://bintray.com/nishantpathak/public/MathView/0.6/link)
 # MathView
 
 - [x] Support all types of math encoding ( MathML, TeX or AsciiMath etc).
