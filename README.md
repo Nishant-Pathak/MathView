@@ -6,7 +6,7 @@
 - [x] Lightweight (~150kb).
 - [x] Fast rendering.
 - [x] Easy to use.
-- [x] Sample code [MainActivity.java](/app/src/main/java/com/nishant/mathsample/MainActivity)
+- [x] Sample code [MainActivity.java](/app/src/main/java/com/nishant/mathsample/MainActivity.java)
 
 Demo
 ----
