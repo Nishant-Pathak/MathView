@@ -12,6 +12,12 @@ Demo
 ----
 ![Demo Url](/demo.gif)
 
+Configured delimiters
+---------------------
+* TeX, inline mode: \(...\) or $...$
+* TeX, display mode: \[...\] or $$...$$
+* Asciimath: \`...\`
+
 Installation
 ------------
 Add below lines to app's build.gradle
