@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
-    mathView.setText("`sum_(i=1)^n i^3=((n(n+1))/2)^2` $2 = x$ $$ in new line 2+ 5 = 10$$");
 
     inputView.addTextChangedListener(new TextWatcher() {
       @Override
