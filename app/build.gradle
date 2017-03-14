@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
+group='com.github.Nishant-Pathak'
+
 repositories {
-  maven {
-    url  "http://nishantpathak.bintray.com/public"
-  }
+  maven { url 'https://jitpack.io' }
 }
 
 android {
@@ -35,7 +35,7 @@ dependencies {
   })
 //  compile project(path: ':mathview-release')
 
-  compile 'com.nishant:mathview:0.6'
-  compile 'com.android.support:appcompat-v7:25.1.0'
+  compile 'com.github.Nishant-Pathak:MathView:v0.6'
+  compile 'com.android.support:appcompat-v7:25.2.0'
   testCompile 'junit:junit:4.12'
 }
