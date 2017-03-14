@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Nishant-Pathak/MathView.svg?branch=master)](https://travis-ci.org/Nishant-Pathak/MathView)
-[ ![Download](https://api.bintray.com/packages/nishantpathak/public/MathView/images/download.svg?version=0.6) ](https://bintray.com/nishantpathak/public/MathView/0.6/link)
+[![](https://jitpack.io/v/Nishant-Pathak/App-Math.svg)](https://jitpack.io/#Nishant-Pathak/App-Math)
+
 # MathView
 
 - [x] Support all types of math encoding ( MathML, TeX or AsciiMath etc).
@@ -25,14 +26,12 @@ Add below lines to app's build.gradle
 
 ```groovy
 repositories {
-  maven {
-    url  "http://nishantpathak.bintray.com/public"
-  }
+  maven { url 'https://jitpack.io' }
 }
 ```
 ```groovy
 dependencies {
-    compile 'com.nishant:mathview:0.6'
+  compile 'com.github.Nishant-Pathak:App-Math:v0.6'
 }
 ```
 
