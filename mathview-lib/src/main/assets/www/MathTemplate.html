@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="
+              width=device-width,
+              height=device-height,
+              initial-scale=1,
+              user-scalable=0" />
+    <title>MathJax AsciiMath Template</title>
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  messageStyle: "none",
+  /*styles: {
+    "#MathJax_Message": {left: "", right: 0},
+    "#MathJax_MSIE_Frame": {left: "", right: 0}
+  },*/
+  showProcessingMessages: false,
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] },
+    asciimath2jax: {
+      delimiters: [['`','`'], ['$','$']]
+    },
+    "fast-preview": {
+    Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+    color: "inherit!important",
+    updateTime: 30, updateDelay: 6,
+    messageStyle: "none",
+    disabled: false
+  }
+  });
+</script>
+
+    <script type="text/javascript"
+            src="scripts/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+    <script>
+  (function () {
+    var QUEUE = MathJax.Hub.queue;  // shorthand for the queue
+    MathJax.Hub.processSectionDelay = 0;
+  //  var math = null;                // the element jax for the math output.
+
+/*
+    QUEUE.Push(function () {
+      math = MathJax.Hub.getAllJax("ascii_output")[0];
+    });
+*/
+    window.UpdateMath = function (TeX) {
+      QUEUE.Push(["Typeset", MathJax.Hub, "ascii_output"]);
+    }
+  })();
+
+  function showFormula (formula) {
+    //MathJax.Message.File = console.log;
+    document.getElementById("ascii_output").textContent = formula;
+    window.UpdateMath(formula);
+  }
+  </script>
+</head>
+<body style="text-align: center;">
+<span id="ascii_output">
+</span>
+</body>
+</html>

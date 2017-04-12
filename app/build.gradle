@@ -31,9 +31,9 @@ dependencies {
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-//  compile project(path: ':mathview-release')
+  compile project(path: ':mathview-lib')
 
-  compile 'com.github.Nishant-Pathak:App-Math:v0.6'
+//  compile 'com.github.Nishant-Pathak:App-Math:v0.6'
   compile 'com.android.support:appcompat-v7:25.2.0'
   testCompile 'junit:junit:4.12'
 }
