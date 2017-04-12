@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/Nishant-Pathak/MathView.svg?branch=master)](https://travis-ci.org/Nishant-Pathak/MathView)
-[![](https://jitpack.io/v/Nishant-Pathak/App-Math.svg)](https://jitpack.io/#Nishant-Pathak/App-Math)
-
+[![](https://jitpack.io/v/Nishant-Pathak/MathView.svg)](https://jitpack.io/#Nishant-Pathak/MathView)
 # MathView
 
 - [x] Support all types of math encoding ( MathML, TeX or AsciiMath etc).
@@ -31,7 +30,7 @@ repositories {
 ```
 ```groovy
 dependencies {
-  compile 'com.github.Nishant-Pathak:App-Math:v0.6'
+  compile 'com.github.Nishant-Pathak:MathView:v1.1'
 }
 ```
 
