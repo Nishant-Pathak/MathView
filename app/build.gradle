@@ -5,12 +5,12 @@ repositories {
 }
 
 android {
-  compileSdkVersion 25
-  buildToolsVersion "25.0.2"
+  compileSdkVersion 27
+  buildToolsVersion "27.0.2"
   defaultConfig {
     applicationId "com.nishant.mathsample"
-    minSdkVersion 19
-    targetSdkVersion 25
+    minSdkVersion 17
+    targetSdkVersion 27
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -24,16 +24,16 @@ android {
 }
 
 dependencies {
-  compile 'com.jakewharton:butterknife:8.4.0'
-  annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+ implementation 'com.jakewharton:butterknife:8.8.1'
+ annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-//  compile project(path: ':mathview-lib')
-  compile 'com.github.Nishant-Pathak:MathView:v1.1'
-//  compile 'com.github.Nishant-Pathak:App-Math:v0.6'
-  compile 'com.android.support:appcompat-v7:25.2.0'
-  testCompile 'junit:junit:4.12'
+  //  compile project(path: ':mathview-lib')
+  implementation 'com.github.Nishant-Pathak:MathView:v1.1'
+  //  compile 'com.github.Nishant-Pathak:App-Math:v0.6'
+  implementation 'com.android.support:appcompat-v7:27.0.2'
+  androidTestImplementation 'junit:junit:4.12'
+    compile project(path: ':mathview-lib')
 }
