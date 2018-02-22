@@ -2,13 +2,13 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-  compileSdkVersion 25
-  buildToolsVersion "25.0.2"
+  compileSdkVersion 27
+  buildToolsVersion '27.0.2'
 //  publishNonDefault true
 
   defaultConfig {
     minSdkVersion 17
-    targetSdkVersion 25
+    targetSdkVersion 27
     versionCode 1
     versionName '1.0'
 
@@ -18,13 +18,12 @@ android {
 
   buildTypes {
     debug {
-      consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      //consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
     release {
       minifyEnabled true
-      shrinkResources true
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-      consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    //  proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    //  consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
 }
@@ -43,7 +42,7 @@ dependencies {
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-  compile 'com.android.support:appcompat-v7:25.1.0'
+  compile 'com.android.support:appcompat-v7:27.0.2'
   testCompile 'junit:junit:4.12'
 }
 
