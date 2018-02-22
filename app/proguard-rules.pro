@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#------------- MathView Start -------------------
+-keepattributes EnclosingMethod
+-keep class com.nishant.** { *; }
+#------------- MathView End   -------------------

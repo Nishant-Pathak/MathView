@@ -6,18 +6,18 @@ repositories {
 
 android {
   compileSdkVersion 27
-  buildToolsVersion "27.0.2"
+  buildToolsVersion '27.0.3'
   defaultConfig {
-    applicationId "com.nishant.mathsample"
+    applicationId 'com.nishant.mathsample'
     minSdkVersion 17
     targetSdkVersion 27
     versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    versionName '1.0'
+    testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
   }
   buildTypes {
     release {
-      minifyEnabled false
+      minifyEnabled true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
@@ -30,9 +30,9 @@ dependencies {
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-  //  compile project(path: ':mathview-lib')
-  implementation 'com.github.Nishant-Pathak:MathView:v1.1'
-  //  compile 'com.github.Nishant-Pathak:App-Math:v0.6'
+
+  // compile project(path: ':mathview-lib')
+  implementation 'com.github.Nishant-Pathak:MathView:v1.2'
   implementation 'com.android.support:appcompat-v7:27.0.2'
   androidTestImplementation 'junit:junit:4.12'
     compile project(path: ':mathview-lib')

@@ -36,14 +36,14 @@ dependencies {
 
 Usage
 -----
-In your layout:
+###In your layout:
 ```xml
     <com.nishant.math.MathView
         android:id="@+id/math_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 ```
-In Activity:
+###In Activity:
 ```java
   @BindView(R.id.math_view)
   MathView mathView;
@@ -54,6 +54,14 @@ In Activity:
     // update the view as below
     mathView.setText("`2+3 = 5`")
   }
+```
+
+
+###Proguard-rules:
+```
+
+-keepattributes EnclosingMethod
+-keep class com.nishant.** { *; }
 ```
 
 License
