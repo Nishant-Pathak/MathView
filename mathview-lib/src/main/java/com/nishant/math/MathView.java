@@ -61,7 +61,8 @@ public final class MathView extends WebView {
       @Override
       public void onPageFinished(WebView view, String url) {
         pageLoaded = true;
-        loadUrl("javascript:showFormula('" + MathView.this.text  + "')");
+        
+        loadUrl("javascript:showFormula('" + MathView.this.text.replace("\\","\\\\")+ "')");
         super.onPageFinished(view, url);
       }
     });
@@ -70,7 +71,7 @@ public final class MathView extends WebView {
   public void setText(String text) {
     this.text = text;
     if (pageLoaded) {
-      loadUrl("javascript:showFormula('" + MathView.this.text  + "')");
+      loadUrl("javascript:showFormula('" + MathView.this.text.replace("\\","\\\\")+ "')");
     } else {
       Log.e(TAG, "Page is not loaded yet.");
     }
