@@ -2,7 +2,7 @@
 [![](https://jitpack.io/v/Nishant-Pathak/MathView.svg)](https://jitpack.io/#Nishant-Pathak/MathView)
 # MathView
 
-:heavy_check_mark: Support all types of math encoding ( MathML, TeX or AsciiMath etc).
+:heavy_check_mark: Support all types of math encoding ( MathML, TeX or AsciiMath etc) and chemical formulas.
 
 :heavy_check_mark: Offline capability.
 
