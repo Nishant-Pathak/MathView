@@ -1,38 +1,39 @@
 apply plugin: 'com.android.application'
 
 repositories {
-  maven { url 'https://jitpack.io' }
+    maven { url 'https://jitpack.io' }
 }
 
 android {
-  compileSdkVersion 27
-  buildToolsVersion '27.0.3'
-  defaultConfig {
-    applicationId 'com.nishant.mathsample'
-    minSdkVersion 17
-    targetSdkVersion 27
-    versionCode 1
-    versionName '1.0'
-    testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
-  }
-  buildTypes {
-    release {
-      minifyEnabled true
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    compileSdkVersion 32
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId 'com.nishant.mathsample'
+        minSdkVersion 17
+        targetSdkVersion 32
+        versionCode 1
+        versionName '1.0'
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 dependencies {
-  implementation 'com.jakewharton:butterknife:8.8.1'
-  annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-  implementation fileTree(include: ['*.jar'], dir: 'libs')
-  androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
-   exclude group: 'com.android.support', module: 'support-annotations'
-  })
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
 
-  implementation 'com.github.Nishant-Pathak:MathView:v1.2'
-  implementation 'com.android.support:appcompat-v7:27.0.2'
-  androidTestImplementation 'junit:junit:4.12'
-  implementation project(path: ':mathview-lib')
+    implementation 'com.github.Nishant-Pathak:MathView:v1.2'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    androidTestImplementation 'junit:junit:4.12'
+    implementation project(path: ':mathview-lib')
 }
