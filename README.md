@@ -69,6 +69,12 @@ Usage
 -keep class com.nishant.** { *; }
 ```
 
+Sponsership
+===========
+Thank you for your interest in the project. If you find it useful, please contribute here to keep the development on
+
+[![Sponser](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/PathakNishant?country.x=IN&locale.x=en_GB)
+
 License
 =======
 Copyright (C) 2016 - 2022 Nishant Pathak
