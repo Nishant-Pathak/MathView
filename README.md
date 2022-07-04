@@ -2,12 +2,17 @@
 [![](https://jitpack.io/v/Nishant-Pathak/MathView.svg)](https://jitpack.io/#Nishant-Pathak/MathView)
 # MathView
 
-- [x] Support all types of math encoding ( MathML, TeX or AsciiMath etc).
-- [x] Offline capability.
-- [x] Lightweight (~150kb).
-- [x] Fast rendering.
-- [x] Easy to use.
-- [x] Sample code [MainActivity.java](/app/src/main/java/com/nishant/mathsample/MainActivity.java)
+:heavy_check_mark: Support all types of math encoding ( MathML, TeX or AsciiMath etc).
+
+:heavy_check_mark: Offline capability.
+
+:heavy_check_mark: Lightweight (~150kb).
+
+:heavy_check_mark: Fast rendering.
+
+:heavy_check_mark: Easy to use.
+
+:heavy_check_mark: Sample code [MainActivity.java](/app/src/main/java/com/nishant/mathsample/MainActivity.java)
 
 Demo
 ----
