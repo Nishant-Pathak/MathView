@@ -20,9 +20,9 @@ Demo
 
 Configured delimiters
 ---------------------
-* TeX, inline mode: \(...\) or $...$
-* TeX, display mode: \[...\] or $$...$$
-* Asciimath: \`...\`
+* TeX, inline mode: ```\(...\) or $...$```
+* TeX, display mode: ```\[...\] or $$...$$```
+* Asciimath: ``` \`...\` ```
 
 Installation
 ------------
