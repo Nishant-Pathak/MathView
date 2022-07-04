@@ -1,162 +1,45 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-  compileSdkVersion 27
-  buildToolsVersion '27.0.3'
-//  publishNonDefault true
+    compileSdkVersion 32
+    buildToolsVersion '27.0.3'
 
-  defaultConfig {
-    minSdkVersion 17
-    targetSdkVersion 27
-    versionCode 1
-    versionName '1.0'
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 32
+        versionCode 1
+        versionName '1.0'
 
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-  }
-
-  buildTypes {
-    debug {
-      //consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    release {
-      minifyEnabled true
-    //  proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    //  consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+    buildTypes {
+        debug {
+            //consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            //  proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //  consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
-  }
 }
 
 group = 'com.github.Nishant-Pathak'
 version = android.defaultConfig.versionName
 
 ext {
-  siteUrl = 'https://github.com/Nishant-Pathak/MathView'
-  gitUrl = 'https://github.com/Nishant-Pathak/MathView.git'
-  descr = 'One stop for all math encoded rendering in Android Edit.'
+    siteUrl = 'https://github.com/Nishant-Pathak/MathView'
+    gitUrl = 'https://github.com/Nishant-Pathak/MathView.git'
+    descr = 'One stop for all math encoded rendering in Android Edit.'
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
-  compile 'com.android.support:appcompat-v7:27.0.2'
-  testCompile 'junit:junit:4.12'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
 }
-
-//install {
-//  repositories.mavenInstaller {
-//    pom.project {
-//      name 'mathview'
-//      description descr
-//      url siteUrl
-//      inceptionYear '2017'
-//
-//      packaging 'aar'
-//      groupId 'com.nishant'
-//      artifactId 'mathview'
-//      version android.defaultConfig.versionName
-//
-//      licenses {
-//        license {
-//          name 'The Apache Software License, Version 2.0'
-//          url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//          distribution 'repo'
-//        }
-//      }
-//      scm {
-//        connection gitUrl
-//        url siteUrl
-//
-//      }
-//      developers {
-//        developer {
-//          name 'Nishant Pathak'
-//          email 'nishantpathak.cse@gmail.com'
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//task createPom {
-//  pom {
-//    project {
-//      packaging 'aar'
-//
-//      name project.name
-//      description descr
-//      url siteUrl
-//      inceptionYear '2016'
-//
-//      licenses {
-//        license {
-//          name 'The Apache Software License, Version 2.0'
-//          url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//        }
-//      }
-//      scm {
-//        connection gitUrl
-//        developerConnection gitUrl
-//        url siteUrl
-//      }
-//      developers {
-//        developer {
-//          id 'Nishant Pathak'
-//          name 'Nishant Pathak'
-//          email 'nishantpathak.cse@gmail.com'
-//        }
-//      }
-//    }
-//  }.writeTo("$buildDir/poms/pom-default.xml").writeTo("pom.xml")
-//}
-//build.dependsOn createPom
-
-//
-//bintray {
-//  user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
-//  key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
-//  configurations = ['archives']
-//  pkg {
-//    repo = 'public'
-//    name = 'MathView'
-//    userOrg = 'nishantpathak'
-//    licenses = ['Apache-2.0']
-//    vcsUrl = gitUrl
-//    desc = descr
-//    labels = ['aar', 'android']
-//    publish = true
-//    publicDownloadNumbers = true
-//
-//    version {
-//      name = android.defaultConfig.versionName
-//      desc = descr
-//      vcsTag = android.defaultConfig.versionName
-//      attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
-//    }
-//  }
-//}
-
-/*
-task sourcesJar(type: Jar) {
-  from android.sourceSets.main.java.srcDirs
-  classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-  source = android.sourceSets.main.java.srcDirs
-  classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-  classifier = 'javadoc'
-  from javadoc.destinationDir
-}
-
-artifacts {
-  archives javadocJar
-  archives sourcesJar
-}
-*/
